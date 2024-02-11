@@ -88,3 +88,8 @@ def printWord(guesses):
         counter += 1 
     return correctLetters 
 
+def lines():
+    print("\r")
+    for char in pickWord:
+        print("\u203E", end = " ")
+
