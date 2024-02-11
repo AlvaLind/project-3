@@ -14,6 +14,7 @@ Shuffle a random word from gameWords
 """
 pickWord = random.choice(gameWords)
 
+
 for x in pickWord:
     print("_", end = " ")
 
@@ -24,53 +25,66 @@ def create_hangman(incorrect):
         print("       |")
         print("       |")
         print("       |")
-        print("      /|\")
-        print("---------")
+        print("      /|")
+        print("--------")
     elif(incorrect == 1):
         print("\n +-----+")
         print(" O     |")
         print("       |")
         print("       |")
         print("       |")
-        print("      /|\")
-        print("---------")
+        print("      /|")
+        print("--------")
     elif(incorrect == 2):
         print("\n +-----+")
         print(" O     |")
         print(" |     |")
         print("       |")
         print("       |")
-        print("      /|\")
-        print("---------")
+        print("      /|")
+        print("--------")
     elif(incorrect == 3):
         print("\n +-----+")
         print(" O     |")
         print(" |\    |")
         print("       |")
         print("       |")
-        print("      /|\")
-        print("---------")
+        print("      /|")
+        print("--------")
     elif(incorrect == 4):
         print("\n +-----+")
         print(" O     |")
         print("/|\    |")
         print("       |")
         print("       |")
-        print("      /|\")
-        print("---------")
+        print("      /|")
+        print("--------")
     elif(incorrect == 5):
         print("\n +-----+")
         print(" O     |")
         print("/|\    |")
         print("/      |")
         print("       |")
-        print("      /|\")
-        print("---------")
+        print("      /|")
+        print("--------")
     elif(incorrect == 6):
         print("\n +-----+")
         print(" O     |")
         print("/|\    |")
         print("/ \    |")
         print("       |")
-        print("      /|\")
-        print("---------")
+        print("      /|")
+        print("--------")
+
+def printWord(guesses):
+    counter:0
+    correctLetters = 0
+    for char in pickWord:
+        if(char in guesses):
+            print(pickWord[counter], end =" ")
+            correctLetters += 1
+        else:
+            print(" ", end =" ")
+        counter += 1 
+    return correctLetters 
+
